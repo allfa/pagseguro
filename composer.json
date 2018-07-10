@@ -1,0 +1,36 @@
+{
+    "name": "allfa/pagseguro",
+    "description": "PagSeguro Checkout Transparente e Pagamento Recorrente(Assinaturas) no Laravel 5.*",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.1",
+    "keywords": ["laravel", "pagseguro"],
+    "authors": [
+        {
+            "name": "Allan Denis Morelli Ribeiro",
+            "email": "allfamaster@yahoo.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Allfa\\PagSeguro\\": "src/PagSeguro/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+		"pagseguro/pagseguro-php-sdk": "^4.2",
+        "illuminate/support": "5.*",
+        "myclabs/php-enum": "^1.6"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Allfa\\PagSeguro\\PagSeguroServiceProvider"
+            ],
+            "aliases": {
+                "PagSeguro": "Allfa\\PagSeguro\\PagSeguroFacade"
+            }
+        }
+    }
+}
+        
